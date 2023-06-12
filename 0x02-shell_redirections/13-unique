@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | uniq -u | grep -wFf | sort
+sort | uniq -u | grep -wFf 
