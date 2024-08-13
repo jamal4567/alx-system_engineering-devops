@@ -12,7 +12,6 @@ def number_of_subscribers(subreddit):
     (not active users, total subscribers) for a given subreddit.
     """
 
-    # Check if subreddit is valid
     if subreddit is None or not isinstance(subreddit, str):
         return 0
 
