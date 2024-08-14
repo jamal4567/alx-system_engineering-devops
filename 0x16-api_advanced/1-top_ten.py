@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module to print the titles of the first 10 hot posts listed for a given subreddit.
+Module to print the titles of the first 10 hot posts listed
+ for a given subreddit.
 """
 
 from requests import get
@@ -21,7 +22,7 @@ def top_ten(subreddit):
     params = {'limit': 10}
 
     try:
-        response = get(url, headers=user_agent, params=params, allow_redirects=False)
+        response = get(url, headers=user_agent, params=params)
 
         if response.status_code != 200:
             print("None")
