@@ -11,6 +11,9 @@
 ## Timeline
 
 - **15:00 GMT+1:** I detected the issue via a monitoring alert indicating high error rates and reduced traffic. (Spoiler: It was not a drill.)
+  
+  ![Monitoring Alert](https://via.placeholder.com/600x300.png?text=Monitoring+Dashboard+Screenshot "Monitoring Alert")
+  
 - **15:05 GMT+1:** I began the initial investigation, suspecting a network issue due to the nature of the 502 errors. (It’s always the network… except when it’s not.)
 - **15:15 GMT+1:** I checked the network infrastructure and found no issues. I then shifted my focus to potential database latency problems. (The database team was getting twitchy.)
 - **15:30 GMT+1:** The database team confirmed that there were no issues with database performance or connectivity. (They sighed with relief.)
@@ -26,6 +29,16 @@
 The root cause of the outage was a misconfiguration in the Nginx load balancer. A recent update, which was intended to improve traffic distribution, inadvertently introduced a faulty configuration. This error caused the load balancer to route all incoming traffic to a single server, which quickly became overwhelmed and led to widespread service failures. (Imagine trying to fit the entire football team into a smart car. Yeah, that’s what happened.)
 
 To resolve the issue, I rolled back the Nginx configuration to a previous stable version. After restarting the load balancer, traffic was redistributed evenly across all servers. I monitored the situation closely and confirmed that error rates had dropped and normal service had resumed.
+
+### Diagram: Traffic Distribution Before and After Fix
+
+**Before Fix (Incorrect Traffic Distribution)**
+
+![Incorrect Traffic Distribution](https://via.placeholder.com/800x400.png?text=Incorrect+Traffic+Distribution "Incorrect Traffic Distribution")
+
+**After Fix (Correct Traffic Distribution)**
+
+![Correct Traffic Distribution](https://via.placeholder.com/800x400.png?text=Correct+Traffic+Distribution "Correct Traffic Distribution")
 
 ## Corrective and Preventative Measures
 
