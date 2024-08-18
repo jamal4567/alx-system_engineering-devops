@@ -34,7 +34,7 @@ To resolve the issue, I rolled back the Nginx configuration to a previous stable
 
 **Before Fix (Incorrect Traffic Distribution)**
 
-![Incorrect Traffic Distribution](https://via.placeholder.com/800x400.png?text=Incorrect+Traffic+Distribution "Incorrect Traffic Distribution")
+![Incorrect Traffic Distribution](https://www.freepik.com/free-vector/construction-landing-page-flat-design_4935545.htm#fromView=search&page=1&position=0&uuid=61f17ac6-a583-4e33-b3c4-4745784b5c7a")
 
 **After Fix (Correct Traffic Distribution)**
 
